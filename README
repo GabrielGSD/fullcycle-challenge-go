@@ -1,17 +1,24 @@
-Cria um novo projeto Go em um diretório vazio:
+# Projeto Go
 
-``go mod init <nome-do-seu-projeto>``
+Este é um projeto em Go que inclui dois arquivos Dockerfile para construir e executar o aplicativo.
 
-Builda o Dockefile:
+## Build e execução com Docker
+
+Para construir a imagem Docker do aplicativo, use o seguinte comando:
 ``docker build -t gabrielgsd/go:dev .``
 
-Roda o container:
+Em seguida, execute o aplicativo no container com o comando:
 ``docker run gabrielgsd/go:dev``
+### Multi-stage build
 
-Agora vamos buildar o Dockerfile.multistage:
+Para construir a imagem Docker utilizando o Dockerfile.multistage, execute o seguinte comando:
 ``docker build -f Dockerfile.multistage -t gabrielgsd/go:multistage .``
 ou
 ``docker build -t gabrielgsd/go:multistage go -f go/Dockerfile.multistage``
 
-E finalmente rodar o container:
+Por fim, execute o aplicativo no container com o comando:
 ``docker run gabrielgsd/go:multistage``
+
+
+Lembre-se que este projeto utiliza o Go Modules. Para iniciar um novo projeto Go em um diretório vazio, utilize o seguinte comando:
+``go mod init <nome-do-seu-projeto>``
