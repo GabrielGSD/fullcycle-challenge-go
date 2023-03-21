@@ -19,6 +19,5 @@ ou
 Por fim, execute o aplicativo no container com o comando:
 ``docker run gabrielgsd/go:multistage``
 
-
 Lembre-se que este projeto utiliza o Go Modules. Para iniciar um novo projeto Go em um diretório vazio, utilize o seguinte comando:
 ``go mod init <nome-do-seu-projeto>``
