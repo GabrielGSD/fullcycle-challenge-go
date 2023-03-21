@@ -22,7 +22,7 @@ Por fim, execute o aplicativo no container com o comando:
 Lembre-se que este projeto utiliza o Go Modules. Para iniciar um novo projeto Go em um diretório vazio, utilize o seguinte comando:
 ``go mod init <nome-do-seu-projeto>``
 
-# Docker Hub
+## Docker Hub
 Além disso, a imagem foi publicada no Docker Hub (https://hub.docker.com/r/gabrielgsd/go), permitindo que outros usuários possam facilmente utilizar a aplicação. Para obter a imagem, basta executar o seguinte comando:
 ``docker pull gabrielgsd/go`` 
 
