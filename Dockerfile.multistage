@@ -1,0 +1,18 @@
+FROM golang:alpine as build
+
+WORKDIR /app
+
+COPY . .
+
+#Compila o aplicativo Go e cria um arquivo binário chamado "main"
+RUN go build -o main .
+
+# Cria uma imagem final com o binário compilado do aplicativo Go
+FROM scratch
+
+WORKDIR /app 
+
+#Copia o binário compilado do aplicativo do contêiner de compilação (build) para o diretório de trabalho neste contêiner final
+COPY --from=build /app .
+
+CMD ["./main"] 

@@ -1,0 +1,17 @@
+Cria um novo projeto Go em um diretório vazio:
+
+``go mod init <nome-do-seu-projeto>``
+
+Builda o Dockefile:
+``docker build -t gabrielgsd/go:dev .``
+
+Roda o container:
+``docker run gabrielgsd/go:dev``
+
+Agora vamos buildar o Dockerfile.multistage:
+``docker build -f Dockerfile.multistage -t gabrielgsd/go:multistage .``
+ou
+``docker build -t gabrielgsd/go:multistage go -f go/Dockerfile.multistage``
+
+E finalmente rodar o container:
+``docker run gabrielgsd/go:multistage``
